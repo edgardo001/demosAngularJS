@@ -4,15 +4,19 @@
 	<meta charset="utf-8">
 	<title>Primera Prueba</title>
 	<script src="js/angular.js"></script>
-	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
 <body>
-	<h1>Hola</h1>
+	<h1>Mi tienda de verduras</h1>
 
-	<p>{{'Texto angularJS'}}</p>
-	<p>Primera suma: {{1+1}}</p>
-	<p>Calculo complejo: {{(49+3)*7+1}} dias del año</p>
+	<ul>
+		<li>Apio {{50 | currency}}</li>
+		<li>Brocoli {{50 | currency:"€"}}</li>
+		<li>Espinaca {{50+10 | currency:"¢"}} importada de {{ 'INdia' | lowercase}}</li>
+		<li>Espinaca {{50+10 | currency:"¢"}} importada de {{ 'INdia' | uppercase}}</li>
+	</ul>
+
 
 </body>
 </html>
