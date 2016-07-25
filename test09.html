@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="miApp">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="circunferencia">
+<label>Diametro</label>
+<input type="text" ng-model="diametro"><br>
+<!--Paso la funcion por la directiva de ng-click-->
+<button ng-click="calcularCircunferencia()">Calcular Circuferencia</button>
+{{circunferencia}}
+</div>
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('miApp',[])
+	//Controlador de miApp
+	miAplicacion.controller('circunferencia',['$scope',function($scope){
+		//Declarar variables
+		var pi = 3.14
+		//Metodo(funcion que vive dentro del controlador)
+		$scope.calcularCircunferencia=function(){
+			$scope.circunferencia=$scope.diametro*pi
+		}
+
+	}])
+
+
+</script>
+
+</body>
+</html> 

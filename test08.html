@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="nombreApp">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="controlador1">
+	nombre: {{ nombre }}
+</div>
+
+<div ng-controller="controlador2">
+	nombre: {{ nombre }}
+</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('nombreApp',[])
+	//Controlador 1 de nombreApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		$scope.nombre="edgardo"
+
+	}])
+	//Controlador 2 de nombreApp
+	miAplicacion.controller('controlador2',['$scope',function($scope){
+		$scope.nombre="alberto "
+
+	}])
+
+</script>
+
+</body>
+</html> 

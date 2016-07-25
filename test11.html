@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="agenda">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Filtrado de Datos</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+	<div ng-controller="controlador1">
+	<h1>Agenda Telefonica</h1>
+	<label>buscar</label>
+	<input type="search" ng-model="busqueda">
+	<p ng-repeat=" entrada in agenda | filter: busqueda" >
+		{{entrada.nombre}} : {{entrada.telefono}}
+	</p>
+	</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('agenda',[])
+	//Controlador de miApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		//Declarar variables
+		$scope.agenda = [
+		{nombre:'edgardo', telefono:'12345678'},
+		{nombre:'carolina', telefono:'98765432'},
+		{nombre:'raul', telefono:'4324354654'},
+		{nombre:'jorge', telefono:'2222222222'},
+		{nombre:'fernando', telefono:'2243222222'},
+		{nombre:'pedro', telefono:'222224562'}
+		]
+		
+	}])
+
+
+</script>
+
+</body>
+</html> 
