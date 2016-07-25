@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="app">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="controlador1">
+	<img ng-src="{{imagenActual}}" class="img-circle" height="300px" width="300px">
+	<button ng-click="mostrarImagen('ejemplo1.jpg')">Imagen 1</button>
+	<button ng-click="mostrarImagen('ejemplo2.jpg')">Imagen 2</button>
+
+</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('app',[])
+	//Controlador de miApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		//Declarar variables
+		$scope.imagenActual = 'img/ejemplo1.jpg'
+		$scope.mostrarImagen = function(_imagen){
+			$scope.imagenActual = "img/".concat(_imagen)
+		}
+		
+	}])
+
+
+</script>
+
+</body>
+</html> 

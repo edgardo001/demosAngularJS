@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="app">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="controlador1">
+
+	<button ng-click="mostrar()">Revelar Secreto</button>
+	<button ng-click="ocultar()">Revelar Secreto</button>
+	<br>
+	<div class="label label-danger" ng-show="visibilidadMensaje"> 
+	Este es un mensaje secreto.
+	</div>
+
+</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('app',[])
+	//Controlador de miApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		//Declarar variables
+		$scope.visibilidadMensaje= false
+		$scope.mostrar = function(){
+			$scope.visibilidadMensaje= true
+		}
+		$scope.ocultar = function(){
+			$scope.visibilidadMensaje= false
+		}
+		
+	}])
+
+
+</script>
+
+</body>
+</html> 

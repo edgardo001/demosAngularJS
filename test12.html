@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="accion">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="controlador1">
+<button ng-click="clickSimple()">Click</button>
+<br>
+<button ng-dblclick="clickDoble()">Click</button>
+<br>
+<img src="img/ejemplo1.jpg" ng-mouseleave="mouseDejaLaImagen()" ng-mouseenter="mouseSobreLaImagen()">
+<br>
+<h1>{{evento}}</h1>
+
+</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('accion',[])
+	//Controlador de miApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		//Declarar variables}
+		$scope.clickSimple=function(){
+			$scope.evento="click"
+		}
+		$scope.clickDoble=function(){
+			$scope.evento="click doble"
+		}
+		$scope.mouseDejaLaImagen=function(){
+			$scope.evento="mouse sale de la imagen"
+		}
+		$scope.mouseSobreLaImagen=function(){
+			$scope.evento="mouse entra la imagen"
+		}		
+	}])
+
+
+</script>
+
+</body>
+</html> 

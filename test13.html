@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="app">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body>
+
+<div ng-controller="controlador1">
+	<div class="well well-sm">
+	<p ng-style="estilos">Yo controlo el estilo de mis aplicaciones con <span ng-class="claseEspecial">AngularJS</span></p>
+	</div>
+
+	<button ng-click="cambiarPropiedades()">Cambiar propiedad</button>
+	<button ng-click="cambiarClases()">Cambiar clases</button>
+	<button ng-click="reiniciarClases()">Eliminar Estilos</button>
+
+</div>
+
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var miAplicacion = angular.module('app',[])
+	//Controlador de miApp
+	miAplicacion.controller('controlador1',['$scope',function($scope){
+		//Declarar variables o funciones anonimas
+		$scope.cambiarPropiedades=function(){
+			$scope.estilos={"background":"blue", 'color':'#ffeb00'}
+		}
+		$scope.cambiarClases=function(){
+			$scope.claseEspecial="label label-danger"
+		}
+
+		$scope.reiniciarClases= function(){
+			$scope.estilos=""
+			$scope.claseEspecial=""
+		}
+
+		
+	}])
+
+
+</script>
+
+</body>
+</html> 
