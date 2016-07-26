@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
+<!--Se da el nombre a la aplacion-->
+<html ng-app="includes">
+<head>
+	<!--Para que reconosca los acentos-->
+	<meta charset="utf-8">
+	<title>Insertar controladores en AngularJS</title>
+	<!--Agrego los JS-->
+	<script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+	<script src="js/bootstrap.js"></script>
+	<!--Agrego los CSS-->
+	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
+<body> 
+
+    <!--Incluye el encabezado -->
+    <div ng-include src="'plantillas/encabezado.html' " class="panel panel-default"></div>
+    <div ng-include src="'plantillas/menu.html' "></div>
+    <br><br><br>
+    
+    <h1>Visita el NG-ZOO</h1>
+    <!--Este es el div que se recarga, con la directiva ng-view y ek metodo zoo.config-->
+    <div ng-view></div>     
+    <ul class="nav navbar-nav">
+        <li nav-item><a href="#/animales/ave1">Ave 1</a></li>
+        <li nav-item><a href="#/animales/ave2">Ave 2</a></li>
+        <li nav-item><a href="#/animales/ave3">Ave 3</a></li>
+    </ul>
+<script>
+	//Declaro el modulo de mi aplicacion (en Angular)
+	var zoo = angular.module('includes',['ngRoute'])//Servicio accesible gracias a angular-route
+    
+    //Esto me ayuda a indexar con los motores de busqueda.
+    //Con esto google
+    zoo.config([ '$routeProvider', function($routeProvider){
+        $routeProvider.
+        when('/animales/ave1',{
+            templateUrl: 'plantillas/ave1.html',
+        }).
+        when('/animales/ave2',{
+            templateUrl: 'plantillas/ave2.html',
+        }).
+        when('/animales/ave3',{
+            templateUrl: 'plantillas/ave3.html',
+        }).
+        otherwise({
+            redirectTo: '/',
+            templateUrl: 'plantillas/inicio.html'
+        })
+    } ])
+</script>
+
+</body>
+</html> 
