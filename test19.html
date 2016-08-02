@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <!--Debe ir la directiva ng-app siempre para aplicaciones angularJS-->
 <!--Se da el nombre a la aplacion-->
-<html ng-app="app">
-<head>
-	<!--Para que reconosca los acentos-->
-	<meta charset="utf-8">
-	<title>Insertar controladores en AngularJS</title>
-	<!--Agrego los JS-->
-	<script src="js/angular.js"></script>
-    <script src="js/angular-route.js"></script>
-	<script src="js/jquery-2.1.4.js"></script>
-	<!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
-	<script src="js/bootstrap.js"></script>
-	<!--Agrego los CSS-->
-	<LINK REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css" MEDIA=screen></head>
-<body>
+<html ng-app="bootstrapApp">
+    <head>
+        <!--Para que reconosca los acentos-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        
+        <title>Insertar controladores en AngularJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link REL=StyleSheet HREF="css/bootstrap.css" TYPE="text/css">
+        <link REL=StyleSheet HREF="css/bootstrap-theme.css" TYPE="text/css">
+        <!--Agrego los CSS-->
+        <style>.btn{margin-bottom: 20px}</style>
+        <!--Agrego los JS-->
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/jquery-2.1.4.js"></script>
+        <!--bootstrap se carga despues de jquery por que bootstrap usa algunos elementos de jquery-->
+        <script src="js/bootstrap.js"></script>
+    </head>
+    <body ng-controller="controladorAnimales">
+        <div ng-include="'plantillas/menu2.html'"></div>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Bienvenido al NG-ZOO</h1>
+                <input type="text" class="form-control" ng-model="animalextra">
+                <a class="btn btn-warning btn-primary" ng-click="mostrarAnimales()">Agregar Animales al NG-ZOO</a>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="list-group">            
+                <li class="list-group-item" ng-repeat="animal in animales"> {{animal}}</li>
+            </ul>
+        </div>
+        <script>
+            //Declaro el modulo de mi aplicacion (en Angular) 
+            var bootstrapApp = angular.module('bootstrapApp',[])
+            bootstrapApp.controller('controladorAnimales', ['$scope',function($scope){                
+                $scope.animales=['Tigre','Elefante','Mono','Oso','Rinoceronte']  
 
-<div ng-controller="controlador1">
+                $scope.mostrarAnimales=function(){
+                    $scope.animales.push($scope.animalextra)
+                }
+            }])
 
 
-</div>
+        </script>
 
-<script>
-	//Declaro el modulo de mi aplicacion (en Angular)
-	var miAplicacion = angular.module('app',[])
-	//Controlador de miApp
-	miAplicacion.controller('controlador1',['$scope',function($scope){
-		//Declarar variables
-		
-	}])
-
-
-</script>
-
-</body>
+    </body>
 </html> 
