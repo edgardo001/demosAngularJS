@@ -1,0 +1,47 @@
+
+En algunas ocasiones es posible que necesites desplegar elementos de acuerdo a lo que ocurre en tu aplicacion, 
+con angularJS solo necesitas unas cuantas lineas para controlar la visibilidad de tus elementos
+
+
+Explica codigo
+
+
+<button ng-click="mostrar()"> Revelar Secreto </button>
+
+<button ng-click="ocultar()"> Volver al misterio </button>
+
+
+
+$scope.visibilidadMensaje = false;
+
+
+*******
+
+
+$scope.mostrar = function(){
+                 
+                   
+                
+                }
+
+
+*******
+
+
+ $scope.visibilidadMensaje = true;
+
+******
+
+
+$scope.ocultar = function(){
+                    
+                     
+                
+                }
+
+
+******
+
+
+
+ $scope.visibilidadMensaje = false; 

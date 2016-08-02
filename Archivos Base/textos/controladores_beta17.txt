@@ -1,0 +1,89 @@
+AngularJS utiliza el patron modelo vista controlador para administrar sus aplicaciones.
+
+Para incluir un controlador en un documento html debemos seguir una serie de pasos necesarios para que angular tenga acceso al controlador.
+
+vamos ahora a aprender a incluir un controlador y a utilizarlo para procesar informacion dentro de una aplicacion.
+
+
+
+********************************
+
+
+
+definir el nombre de tu aplicacion
+
+
+inspeccionar el codigo
+
+
+**********************************************
+
+
+declarar el modulo de la aplicacion
+
+
+angular va a utilizar este arreglo vacio para inyectar automaticamente todas las dependencias necesarias para crear la aplicacion.
+No es necesario que incluyas nada aqui, angularJS se encarga de administrar la informacion necesaria, solo debemos dejar este arreglo vacio.
+
+
+
+**********************************************
+
+
+declarar el controlador con scope
+
+- Scope es un elemento especial de AngularJS y nos permite acceder a todos los elementos que estan dentro del alcance de el controlador que estamos creando.
+
+En angularJS los controladores tienen un alcance limitado unicamente a la etiqueta en que son creados, de esta forma podemos mantener un codigo mas ordenado.
+
+agregar la directiva en el HTML
+
+explicar el scope 
+
+
+
+Vamos a poner en accion nuestro controlador.
+
+
+
+
+
+      <div ng-controller="controlador1">
+          
+          <h1>¡Promoción de Mangos!</h1>
+          <h2>$2.15 cada uno</h2>
+          
+          <label>Candidad de mangos:</label>
+          <input type="text" ng-model="cantidad">
+          
+          <br>
+          
+          Precio Total:  {{ cantidad * precio | currency}}
+          
+        
+      </div>
+      
+       
+      
+      
+      <script>
+      
+         var miAplicacion = angular.module('tiendaDeFruta', []);
+          
+          
+            miAplicacion.controller('controlador1', ['$scope', function($scope) {
+                $scope.cantidad = 0
+                $scope.precio = 2.15
+                
+                
+                
+            }]);
+          
+          
+      
+      </script>
+
+
+
+
+

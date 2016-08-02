@@ -1,0 +1,62 @@
+ES_724_10_03  Rutas y vistas 
+
+Posiblemente una de las herramientas mas poderosas de angularJS es su capacidad de controlar la ruta que despliega el navegador
+Esta tecnica, comunmente llamada routing nos permite ejecutar 
+todo el codigo de una aplicacion en un solo archivo HTML cargando asincronicamente el contenido que necesitas 
+
+esto reduce notablemente lso tiempos de respuesta de tu aplicacion.
+
+Pero, a diferencia de un simple AJAX, angularJS, al gestional la ruta del documento permite que los contenidos sean indexables en motores de busqueda.
+
+Vamos a crear rutas!
+
+
+
+
+Explicar codigo
+
+mencionar que tiene routing
+
+
+
+inyectar dependencia.    'ngRoute'
+
+
+explicar el NG-view
+
+
+<div ng-view></div>
+
+
+********************************************
+
+
+zoo.config(['$routeProvider',
+              function($routeProvider) {
+                $routeProvider.
+                  when('/animales/ave1', {
+                    templateUrl: 'plantillas/ave1.html',
+                  }).
+                  when('/animales/ave2', {
+                    templateUrl: 'plantillas/ave2.html',
+                  }).
+                  when('/animales/ave3', {
+                    templateUrl: 'plantillas/ave3.html',
+                  }).
+                  otherwise({
+                    redirectTo: '/',
+                      templateUrl: 'plantillas/inicio.html',
+                  });
+              }]);
+
+
+*******************************************
+
+
+ <li> <a href="#/animales/ave1"> Ave 1 </a></li>
+            <li> <a href="#/animales/ave2"> Ave 2 </a></li>
+            <li> <a href="#/animales/ave3"> Ave 3</a></li>
+
+
+
+El routing de AngularJS permite crear sitios rapidos, eficientes e indexables!

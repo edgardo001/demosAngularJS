@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="zoo" >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <style>
+             
+            header{
+                height: 50px;
+                background: #00FF00;
+                text-align: center;
+                line-height: 50px;
+                font-size: 40px;
+            }
+            
+        </style>
+    </head>
+    
+    
+    <body >
+        
+        
+        <div ng-include src="'partials/encabezado.html'"></div>
+        
+        <ul>
+            <li> <a href="#/animales/ave1"> Ave 1 </a></li>
+            <li> <a href="#/animales/ave2"> Ave 2 </a></li>
+            <li> <a href="#/animales/ave3"> Ave 3</a></li>
+        </ul>
+         
+        <div ng-view>
+        holo
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js" ></script>
+        <script src="https://code.angularjs.org/1.3.0-beta.10/angular-route.js"></script>
+        <script>
+            
+            var zoo = angular.module('zoo', [
+              'ngRoute'
+            ]);
+            
+            
+            zoo.config(['$routeProvider',
+              function($routeProvider) {
+                $routeProvider.
+                  when('/animales/ave1', {
+                    templateUrl: 'partials/ave1.html',
+                  }).
+                  when('/animales/ave2', {
+                    templateUrl: 'partials/ave2.html',
+                  }).
+                  when('/animales/ave3', {
+                    templateUrl: 'partials/ave3.html',
+                  }).
+                  otherwise({
+                    redirectTo: '/'
+                  });
+              }]);
+
+            
+            
+            
+
+            
+            function administradorClicks($scope){
+            
+                $scope.mostrarMensaje = function (){
+                    $scope.mensaje = "zoologico!!!";
+                }
+            }
+            
+        </script>
+        
+    </body>
+</html>

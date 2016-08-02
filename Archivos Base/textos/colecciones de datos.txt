@@ -1,0 +1,54 @@
+Regularmente en una aplicacion vamos a utilizar colecciones de informacion tales como arreglos u objetos.
+
+vamos a utilizar AngularJS para representar estos datos en una aplicacion
+
+
+
+Explicar el codigo
+
+
+ 
+
+**********
+ 
+                $scope.nombresSimples = [ "Alois", " Gardenzio" , "Carlos" ];
+
+***********
+
+
+
+<ul>
+          
+                <li ng-repeat=" nombreIndividual in nombresSimples ">
+                    {{ nombreIndividual }}
+                </li>
+            </ul>
+
+
+
+
+************
+
+
+              
+              $scope.heroes = [
+                
+                   { nombre:"Arnold", apellido:"Schwarzenegger"},
+                   { nombre:"Sylvester", apellido:"Stallone"},
+                   { nombre:"Chuck", apellido:"Norris"} 
+              
+              ]
+
+
+
+**************
+
+
+            <h1>Héroes de acción</h1> 
+            
+            <ul>
+          
+                <li ng-repeat=" nombreIndividual in heroes ">
+                    {{ nombreIndividual.nombre }}  {{ nombreIndividual.apellido }}
+                </li>
+            </ul>

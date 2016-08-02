@@ -1,0 +1,54 @@
+Adobe Brackets
+
+
+
+
+Google Chrome
+
+------
+
+
+para crear aplicaciones en Angular JS necesitaras solamente dos elementos basicos
+
+
+Un editor de codigo y un navegador
+
+El editor de codigo puede ser cualquier programa de tu preferencia como Adobe Dreamweaver o Sublime Text, en este curso vamos a utilizar Un programa llamado Adobe Brackets.
+
+URL
+
+
+este programa de adobe es de codigo abierto, su licencia es totalmente gratuita y es compatible con Windows, macOs y Linux 
+asi que puedes trabajar tus aplicanes angularJS desde cualquier plataforma que desees
+
+
+el segundo elementos que vas a necesitar es un navegador para probar tu codigo, tambien en este caso tienes muchas opciones como Safari, Firefox e internet Explorer.
+En este curso vamos a utilizar google chrome porque es sumamente popular, tiene un excelente soporte para HTML y Javascript 
+ademas te tener muchas extensiones  que  te permitiran expandirlo y personalizarlo segun tus gustos y necesidades especificas.// 
+
+
+Vamos a ver estas dos herramientas en accion. 
+
+PAUSA!!!
+
+
+
+
+
+Primero voy a abrir una carpeta en brackets y como puedes ver tiene soporte para manipular archivos HTML, CSS y Javascript
+que son jusutamente los que vamos a dearrollar en una aplicacion AngularJS.
+
+Aca estoy viendo el documento que estoy trabajando en Google Chrome y voy a porbar una de las herramientas mas utiles de este navegador: la consola de depuracion.
+
+Solo necesito presionar en cualquier parte del documento, seleccionar la opcion "inspeccionar elemento" 
+y tendre acceso a una serie de herramientas que me permiten analizar todos los aspectos de mi aplicacion 
+voy a ir especificamente a el apartado consola, donde se muestran los posibles errores de programacion.
+
+como vez ahora no muestra ningun error 
+
+
+
+esta tecnica te puede ser muy util para probar los ejemplos de este curso, si en algun momento tienes resultados distintos a los que aparecen en el video,
+ prueba revisar en esta seccion si tienes un error, google chrome te dira cual es el tipo de error y la linea en que se encuentra para que lo soluciones mas rapidamente.
+
+ahora si, ya tenemos nuestras herramientas de trabajo preparadas y estamos listos para comenzar a crear aplicaciones en AngularJS

@@ -1,0 +1,28 @@
+
+Cuando necesites intercambiar imagenes vas a encontrar que 
+angular tiene una simple tecnica para que puedas adminsitrar dinamicamente tus imagenes
+
+
+vamos a crear esta funcionalidad con AngularJS
+
+
+
+<img src="ejemplo1.png"  ng-src="{{imagenActual}}">
+          
+          
+          <button ng-click="mostrarImagen('ejemplo1.png')"> Imagen 1 </button>
+          <button ng-click="mostrarImagen('ejemplo2.png')"> Imagen 2 </button>
+
+
+
+
+ $scope.imagenActual =  'ejemplo1.png';
+              
+                $scope.mostrarImagen = function(_imagen){
+                
+                    $scope.imagenActual = _imagen
+                }
+
+
+
+<img src="ejemplo1.png"  ng-src="{{imagenActual}}">

@@ -1,0 +1,11 @@
+muchos desarrolladores gustan de validar su codigo HTML con los standares W3c
+
+es una excelente practica
+
+sin embargo en el caso de las aplicaciones Angular, es posible que tengas problemas para validar
+
+
+URL
+
+el error es unicamente nominal y no afecta la compatibilidad o calidad del documento en ninguna forma
+

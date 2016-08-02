@@ -1,0 +1,45 @@
+En una aplicacion, interactuar con el usuario es absolutamente crucial 
+
+Las diferentes acciones que puede realizar el usuario o el sistema se llaman eventos,  
+en angularJS tambien tenemos elementos que escuchan estos eventos y adaptan la aplicacion a lo que ocurre en el momento.
+
+Vamos a hacer que nuestra aplicacion escuche las acciones de nuestros usuarios.
+
+
+
+ 
+            <button ng-click="clickSimple()"> Click </button> 
+            <button ng-dblclick="clickDoble()"> Doble Click  </button>
+          
+          
+            <img src="ejemplo1.png" ng-mouseenter="mouseSobreLaImagen()"  ng-mouseleave="mouseDejaLaImagen('yolo')"  >
+          
+          
+            <h1>{{ evento }}</h1>
+
+
+
+
+
+
+              $scope.mouseDejaLaImagen = function(){
+                $scope.evento = "mouse sale de la imagen"
+              }
+              
+              $scope.mouseSobreLaImagen = function(){
+                $scope.evento = "mouse entra la imagen"  
+              }
+              
+              $scope.clickSimple = function(){
+                $scope.evento = "click"   
+              }
+              
+              $scope.clickDoble = function(){
+                $scope.evento = "doble"   
+              }
+
+
+
+<img src="ejemplo1.png" ng-mouseenter="mouseSobreLaImagen()"  ng-mouseleave="mouseDejaLaImagen('yolo')"  >
+
+

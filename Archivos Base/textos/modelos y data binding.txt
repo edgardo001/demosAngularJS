@@ -1,0 +1,33 @@
+En angular los modelos son elementos donde almacenamos la informacion de la aplicacion.
+
+Los modelos pueden contener muchos tipos de datos desde complejas bases de datos hasta pequenos datos individuales.
+
+En angularJS Los modelos Tienen la capacidad de generar data binding que es una caracteristica que 
+nos permite unir en tiempo real los datos de un modelo dentro de una expresion o variable.
+
+
+
+Vamos a crear una aplicacion simple utilizando los modelos de AngularJS
+
+
+ 
+       
+     <label> Nombre:</label>
+     <input type="text" ng-model = "nombre" >
+       
+      
+      <div class="tarjeta">
+      
+            <h2>Mi nombre es:</h2>
+            <h1>{{  nombre  }}</h1>
+          
+       </div>
+      
+
+
+Rigoberto
+
+Gerardo
+
+
+Gracias a los modelos de angularJS acabamos de crear una aplicacion que relaciona datos en tiempo real y solo hemos necesitado agregar unas cuantas lineas de codigo

@@ -1,0 +1,48 @@
+ES_724_10_01
+
+http://127.0.0.1:63252/index.html
+
+
+Los Desarrolladores somos expertos en reciclar y siempre estamos buscando formas de reutilizar nuestro codigo
+En AngularJS podemos incluir documentos externos dentro de nuestras aplicaciones para crear disenos modulares y plantillas.
+
+
+
+Para habilitar esta funcion es requisito instalar uno de los modulos adicional de AngularJS. 
+
+
+para encontrarlo debemos ir a la pagina oficial de angular
+
+
+en este caso necesitaremos el modulo anguilar-route
+
+
+
+lo vamos a instalar en nuestro documento 
+
+
+<script src="https://code.angularjs.org/1.2.21/angular-route.min.js"></script>
+
+
+
+
+
+No necesitas relacionarlo con ningun controlador o modelo, pero si es requisito que declares el modulo de tu aplicacion
+
+
+listo, ya podemos cargar documentos externos.
+
+
+
+La carga se hace utilizando el ng-include y src
+
+
+
+<div ng-include src=" 'plantillas/encabezado.html' "> </div>
+         <div ng-include src=" 'plantillas/menu.html' "> </div>
+          
+
+
+
+los elementos que cargamos heredan todos los controladores, CSS y javascript 
+de la misma forma que si estuvieran escritos directamente en el codigo original

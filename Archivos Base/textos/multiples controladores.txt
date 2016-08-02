@@ -1,0 +1,59 @@
+Una aplicacion AngularJS puede tener un numero ilimitado de controladores, te voy a mostrar como cada uno de ellos trabaja independientemente.
+
+Nicolás
+
+
+Explicar codigo actual
+
+
+agregar valores al controlador
+
+
+relacionarlo al html
+
+   
+      
+      <div ng-controller="controlador1">
+      
+            Nombre: {{nombre}}
+            
+    
+      </div>
+      
+      <hr>
+      
+      
+      <div ng-controller="controlador2">
+      
+            Nombre: {{nombre}}
+            
+    
+      </div>
+      
+      
+      
+       
+      
+      
+      <script>
+      
+          var miAplicacion = angular.module( 'nombreApp' , [] )
+          
+          miAplicacion.controller ( 'controlador1' , [ '$scope' , function($scope){
+          
+                $scope.nombre = "Nicolas"
+          
+          } ] )
+          
+          
+          
+          miAplicacion.controller ( 'controlador2' , [ '$scope' , function($scope){
+          
+                $scope.nombre = "Amelia"
+          
+          } ] )
+          
+      
+      </script>
+      
+ 

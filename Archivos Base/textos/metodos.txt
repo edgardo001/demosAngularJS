@@ -1,0 +1,55 @@
+
+Un controlador de AngularJS es un elemento creado para trabajar, aunque puede almacenar valores
+generalmente incluye procesos y calculos internos. Los metodos son funciones internas que existen dentro de un controlador 
+y nos permiten realizar calculos mas complejos.
+
+Vamos a aprender a utilizar lo metodos dentro de un controlador
+
+
+Explicar documento
+
+
+*******
+
+crear pi
+
+crear model en HTML
+
+crear método diámetro
+
+relacionar boton con metodo
+
+ 
+
+
+<div ng-controller="circunferencia">
+      
+          <label>Radio</label> <br>
+          <input type="text" ng-model="diametro"> <br>
+          
+          <button ng-click="calcularCircunferencia()"> Calcular Circunferencia</button>
+          
+          <h1> {{circunferencia}} </h1>
+          
+          
+      </div>
+
+
+
+
+
+
+var miAplicacion = angular.module( 'miApp' , [] )
+          
+          miAplicacion.controller ( 'circunferencia' , [ '$scope' , function($scope){
+          
+               var pi = 3.14
+               
+               $scope.calcularCircunferencia = function(){
+               
+                    $scope.circunferencia = $scope.diametro * pi;
+               
+               }
+          
+          }])
+          

@@ -1,0 +1,34 @@
+
+
+Las aplicaciones web son cada dia mas complejas, cada vez mas requieren frameworks especializados, 
+soporte para mas dispositivos y demandan mas eficiencia ademas Buenas practicas.
+
+
+Con el tiempo vas a notar como te toma cada vez mas tiempo instalar y organizar tu proyecto para comenzar
+esto que te hace perder valioso tiempo que podrias dedicar a desarrollar.
+
+Precisamente para eso fue creado yeoman, un proyecto que te ayuda a 
+crear y configurar tus aplicaciones en minutos.
+
+
+Antes de isntalar yeoman, primero debes realizar un paso extra: es necesario instalar node en tu equipo.
+
+
+NODE
+
+
+Tambien, aunque no es requisito, te recomiendo que te asegures de tener instaldo 
+
+
+En el caso de los usuarios de windows solo deben presionar el boton de inicio y en la casilla de busqueda escribir cmd
+
+los usuarios de Mac OS deben abrir el programa llamado terminal
+
+En ambos casos tendremos algo similar a esto
+
+
+
+
+npm install -g bower
+
+bower install

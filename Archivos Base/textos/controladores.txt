@@ -1,0 +1,31 @@
+ES_724_05_01
+
+
+AngularJS utiliza el patron modelo vista controlador para administrar sus aplicaciones.
+
+Para incluir un controlador en un documento debemos utilizar una directiva especializada.
+
+
+
+vamos a aprender a crear e incluir un controlador basico en AngularJS
+
+DOC
+
+
+
+Primero vamos a crear el controlador, en su forma mas simple un controlador es una funcion
+
+dentro de esta funcion puedo ejecutar cualquier proceso que necesite mi controlador
+
+
+
+es comun que una aplicacion tenga multiples controladores
+
+
+CREAR SEGUNDO
+
+
+En principio cada controlador esta limitado en su alcance unicamente a la etiqueda de codigo en que fue creado
+
+
+ordenado y encapsulado que nos permitira crear aplicaciones robustas y escalables

@@ -1,0 +1,6 @@
+representar valores
+
+
+ {{ ( 49+3 ) * 7 + 1 }} dias del año <br>
+      
+   {{ 3*8 }} horas al dia

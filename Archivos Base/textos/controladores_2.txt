@@ -1,0 +1,21 @@
+ES_724_05_02
+
+los controladores en AngularJS van a ser la clave para manipular elementos, 
+procesar datos y representar datos complejos en nuestras aplicaciones.
+
+
+
+EJEMPLO
+
+
+Los controladores estan relacionados estrechamente con el objeto $scope
+
+
+$scope es un objeto especial de AngularJS, 
+alli se encapsula toda la informacion sobre los valores y elementos ubicados en el area de alcance de un controlador.
+
+Nicolás
+Amelia
+
+pagué
+

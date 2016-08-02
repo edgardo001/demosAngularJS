@@ -1,0 +1,37 @@
+Al ir evolucionando nuestras aplicaciones vamos a necesitar modificar su apariencia para que reflejen los cambios y actualizaciones.
+
+
+AngularJS tambien tiene control sobre los elementos graficos, vamos a darle estilo a una aplicacion!
+
+
+
+
+<button ng-click="cambiarPropiedades()"> Cambiar propiedades </button>
+        <button ng-click="cambiarClases()"> Cambiar clases </button>
+        <button ng-click="reiniciarClases()"> Eliminar Estilos </button>
+
+
+
+
+<p ng-style="estilos" > Yo controlo el estilo de mis aplicaciones con <span ng-class="claseEspecial">AngularJS</span> </p>
+
+
+
+
+ $scope.cambiarPropiedades = function(){
+                
+                   $scope.estilos = {'background-color':'blue', 'color': '#ffeb00'}
+                  
+               }
+                $scope.cambiarClases = function(){
+                
+                  
+                  $scope.claseEspecial = "angular"
+                  
+               }
+                
+                $scope.reiniciarClases = function(){
+                
+                    $scope.estilos = ""
+                    $scope.claseEspecial= ""
+                }
